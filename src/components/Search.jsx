@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { useState } from "react"
 import { FaSearch } from "react-icons/fa"
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Search() {
   const [input, setInput] = useState("");
@@ -12,7 +13,10 @@ function Search() {
     navigate('/searched/'+input)
   }
 
-  return (
+  return (<div>
+    <Logo to={'/'}>
+      <h3>Recipes App</h3>
+    </Logo>
     <FormStyle onSubmit={submitHandler}>
       <div>
         <FaSearch></FaSearch>
@@ -23,8 +27,28 @@ function Search() {
         />
       </div>
     </FormStyle>
+    </div>
   )
 }
+
+const Logo = styled(Link)`
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: ease-in .1s;
+  
+  &:hover {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5rem;
+    background-color: #333;
+    
+    h3 {
+      color: #fff;
+    }
+  }
+`
 
 const FormStyle = styled.form`
   div {
