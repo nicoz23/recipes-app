@@ -14,7 +14,7 @@ function Search() {
   }
 
   return (<div>
-    <Logo to={'/vite-react-example/'}>
+    <Logo to={'/recipes-app/'}>
       <h3>Recipes App</h3>
     </Logo>
     <FormStyle onSubmit={submitHandler}>

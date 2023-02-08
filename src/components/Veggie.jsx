@@ -44,7 +44,7 @@ function Veggie() {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>
-                  <Link to={'/vite-react-example/recipe/'+recipe.id}>
+                  <Link to={'/recipes-app/recipe/'+recipe.id}>
                     <p>{recipe.title}</p>
                     <img src={recipe.image} alt={recipe.title} />
                     <Gradient />

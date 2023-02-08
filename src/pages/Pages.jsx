@@ -8,10 +8,10 @@ import { Route, Routes } from 'react-router-dom'
 function Pages() {
   return (
     <Routes>
-      <Route path='/vite-react-example/' element={<Home />} />
-      <Route path='/vite-react-example/cuisine/:type' element={<Cuisine />} />
-      <Route path='/vite-react-example/searched/:search' element={<Searched />} />
-      <Route path='/vite-react-example/recipe/:name' element={<Recipe />} />
+      <Route path='/recipes-app/' element={<Home />} />
+      <Route path='/recipes-app/cuisine/:type' element={<Cuisine />} />
+      <Route path='/recipes-app/searched/:search' element={<Searched />} />
+      <Route path='/recipes-app/recipe/:name' element={<Recipe />} />
     </Routes>
   )
 }

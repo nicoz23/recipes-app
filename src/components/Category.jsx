@@ -6,19 +6,19 @@ import { NavLink } from 'react-router-dom'
 function Category() {
   return (
     <List >
-      <SLink to={'/vite-react-example/cuisine/Italian'}>
+      <SLink to={'/recipes-app/cuisine/Italian'}>
         <FaPizzaSlice />
         <h4>Italian</h4>
       </SLink>
-      <SLink to={'/vite-react-example/cuisine/American'}>
+      <SLink to={'/recipes-app/cuisine/American'}>
         <FaHamburger />
         <h4>American</h4>
       </SLink>
-      <SLink to={'/vite-react-example/cuisine/Thai'}>
+      <SLink to={'/recipes-app/cuisine/Thai'}>
         <GiNoodles />
         <h4>Thai</h4>
       </SLink>
-      <SLink to={'/vite-react-example/cuisine/Japanese'}>
+      <SLink to={'/recipes-app/cuisine/Japanese'}>
         <GiChopsticks />
         <h4>Japanese</h4>
       </SLink>
