@@ -10,7 +10,7 @@ function Search() {
 
   const submitHandler = (e) => {
     e.preventDefault;
-    navigate('/vite-react-example/searched/'+input)
+    navigate('/recipes-app/searched/'+input)
   }
 
   return (<div>
