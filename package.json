@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
