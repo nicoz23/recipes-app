@@ -10,11 +10,11 @@ function Search() {
 
   const submitHandler = (e) => {
     e.preventDefault;
-    navigate('/searched/'+input)
+    navigate('/vite-react-example/searched/'+input)
   }
 
   return (<div>
-    <Logo to={'/'}>
+    <Logo to={'/vite-react-example/'}>
       <h3>Recipes App</h3>
     </Logo>
     <FormStyle onSubmit={submitHandler}>

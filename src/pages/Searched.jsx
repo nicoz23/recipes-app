@@ -23,7 +23,7 @@ function Searched() {
     <Grid>
       {searchedRecipes.map((item) =>{
         return (
-          <Link to={'/recipe/' + item.id}>
+          <Link to={'/vite-react-example/recipe/' + item.id}>
             <Card key={item.id}>
               <img src={item.image} alt={item.title} />
               <h4>{item.title}</h4>
