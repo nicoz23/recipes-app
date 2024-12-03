@@ -5,9 +5,10 @@ import './App.css'
 import Search from './components/Search'
 
 function App() {
+  const basename = process.env.NODE_ENV === "production" ? "/recipes-app" : "/";
   return (
     <div className='App'>
-      <Router basename={import.meta.env.BASE_URL}>
+      <Router basename={basename}>
         <Search />
         <Category />
         <Pages />
