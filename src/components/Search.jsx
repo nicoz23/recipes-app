@@ -9,8 +9,10 @@ function Search() {
   const navigate = useNavigate()
 
   const submitHandler = (e) => {
-    e.preventDefault;
-    navigate('/searched/'+ input)
+    e.preventDefault();
+    if (input.trim()) {
+      navigate('/searched/' + input);
+    }
   }
 
   return (<div>
