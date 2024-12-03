@@ -1,6 +1,6 @@
 import Pages from './pages/Pages'
 import Category from './components/Category'
-import { HashRouter as Router} from 'react-router-dom'
+import { BrowserRouter as Router} from 'react-router-dom'
 import './App.css'
 import Search from './components/Search'
 
