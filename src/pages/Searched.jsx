@@ -12,6 +12,7 @@ function Searched() {
       https://api.spoonacular.com/recipes/complexSearch?apiKey=5ffc697089884039873a556541ad8a4b&query=${name}`
     )
     const recipes = await data.json()
+    console.log(recipes)
     setSearchedRecipes(recipes.results)
   }
 
