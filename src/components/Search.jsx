@@ -10,17 +10,17 @@ function Search() {
 
   const submitHandler = (e) => {
     e.preventDefault;
-    navigate('/recipes-app/searched/'+input)
+    navigate('/searched/'+ input)
   }
 
   return (<div>
-    <Logo to={'/recipes-app/'}>
+    <Logo to={'/'}>
       <h3>Recipes App</h3>
     </Logo>
     <FormStyle onSubmit={submitHandler}>
       <div>
         <FaSearch></FaSearch>
-        <input 
+        <input
           onChange={(e) => setInput(e.target.value)}
           type="text"
           value={input}

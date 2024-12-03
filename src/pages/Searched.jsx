@@ -21,9 +21,10 @@ function Searched() {
 
   return (
     <Grid>
-      {searchedRecipes.map((item) =>{
+      {searchedRecipes ? (<>
+        {searchedRecipes?.map((item) =>{
         return (
-          <Link to={'/recipes-app/recipe/' + item.id}>
+          <Link to={'/recipe/' + item.id}>
             <Card key={item.id}>
               <img src={item.image} alt={item.title} />
               <h4>{item.title}</h4>
@@ -31,6 +32,7 @@ function Searched() {
           </Link>
         )
       })}
+      </>) : (<h1>Loading</h1>)}
     </Grid>
   )
 }

@@ -8,10 +8,10 @@ import { Route, Routes } from 'react-router-dom'
 function Pages() {
   return (
     <Routes>
-      <Route path='/recipes-app/' element={<Home />} />
-      <Route path='/recipes-app/cuisine/:type' element={<Cuisine />} />
-      <Route path='/recipes-app/searched/:search' element={<Searched />} />
-      <Route path='/recipes-app/recipe/:name' element={<Recipe />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/cuisine/:type' element={<Cuisine />} />
+      <Route path='/searched/:search' element={<Searched />} />
+      <Route path='/recipe/:name' element={<Recipe />} />
     </Routes>
   )
 }

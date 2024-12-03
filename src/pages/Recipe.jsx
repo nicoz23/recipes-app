@@ -22,37 +22,39 @@ function Recipe() {
 
   return (
     <DetailWrapper>
-      <div>
-        <h2>{details.title}</h2>
-        <img src={details.image} alt={details.title} />
-      </div>
-      <Info>
-        <Button 
-          className={activeTab === 'instructions' ? 'active' : ''} 
-          onClick={() => setActiveTab('instructions')}
-        >
-          Intructions
-        </Button>
-        <Button 
-          className={activeTab === 'ingredients' ? 'active' : ''} 
-          onClick={() => setActiveTab('ingredients')}
-        >
-          Ingredients
-        </Button>
-        {activeTab === 'instructions' && (
+      {details ? (<>
         <div>
-          <h3 dangerouslySetInnerHTML={{__html: details.summary }}></h3>
-          <h3 dangerouslySetInnerHTML={{__html: details.instructions }}></h3>
+          <h2>{details.title}</h2>
+          <img src={details.image} alt={details.title} />
         </div>
-        )}
-        {activeTab === 'ingredients' && (
-        <ul>
-          {details.extendedIngredients.map((ingredient) => (
-            <li key={ingredient.id}>{ingredient.original}</li>
-          ))}
-        </ul>
-        )}
-      </Info>
+        <Info>
+          <Button 
+            className={activeTab === 'instructions' ? 'active' : ''} 
+            onClick={() => setActiveTab('instructions')}
+          >
+            Intructions
+          </Button>
+          <Button 
+            className={activeTab === 'ingredients' ? 'active' : ''} 
+            onClick={() => setActiveTab('ingredients')}
+          >
+            Ingredients
+          </Button>
+          {activeTab === 'instructions' && (
+          <div>
+            <h3 dangerouslySetInnerHTML={{__html: details.summary }}></h3>
+            <h3 dangerouslySetInnerHTML={{__html: details.instructions }}></h3>
+          </div>
+          )}
+          {activeTab === 'ingredients' && (
+          <ul>
+            {details.extendedIngredients.map((ingredient) => (
+              <li key={ingredient.id}>{ingredient.original}</li>
+            ))}
+          </ul>
+          )}
+        </Info>
+      </>) : (<h1>Loading...</h1>)}
     </DetailWrapper>
   )
 }
